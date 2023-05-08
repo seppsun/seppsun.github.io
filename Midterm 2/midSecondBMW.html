@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>BMW</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var inita = document.getElementsByClassName("img-slide");
+				var initb = document.getElementsByClassName("ponitBtn");
+				inita[0].style.display = 'block';
+				for (var i = 1; i < inita.length; i++) {
+					inita[i].style.display = 'none';
+					initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			var index1 = -1;
+
+			function ChangeImg1(item) {
+				if (item === undefined) {
+					index1++;
+				} else {
+					index1 = item;
+				}
+				var a = document.getElementsByClassName("img-slide");
+				var b = document.getElementsByClassName("ponitBtn");
+				if (index1 >= a.length) index1 = 0;
+				for (var i = 0; i < a.length; i++) {
+					a[i].style.display = 'none';
+					b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+				a[index1].style.display = 'block';
+				b[index1].style.background = 'rgb(255, 117, 5)';
+
+			}
+			//Timer for switching pictures, 2 seconds per image.
+			setInterval(ChangeImg1, 3000);
+		</script>
+	</head>
+	<body>
+		<div style="height: 90%;width: 100%;">
+			
+			<div class="infoModalNew">
+				<div class="insidetextNew">
+					<div>
+						<h2>BMW M4 CSL</h2>
+						<details open>
+							<summary>Introduction</summary>
+							<p>The BMW M4 CSL, also known as the "Coupe Sport Lightweight," is a high-performance version of the BMW M4 sports car. It is a limited edition model that was released in 2023, designed for car enthusiasts and track-day enthusiasts. The M4 CSL is the ultimate driving machine that promises pure driving pleasure, thanks to its lightweight construction, advanced aerodynamics, and powerful engine.</p>
+							<p></p>
+							<p>The exterior design of the BMW M4 CSL is sleek and aggressive, with a low profile and a wide stance. It features a carbon fiber roof, hood, and trunk lid, which reduces weight and improves the car's handling and stability. The car's front splitter, rear diffuser, and carbon fiber wing contribute to its aerodynamic performance. The interior of the M4 CSL is designed for performance and comfort, with lightweight bucket seats, carbon fiber trim, and advanced technology features.</p>
+						</details>
+					</div>
+
+					<div style="margin-top: 50px;">
+					
+						<details>
+							<summary>Specs</summary>
+							<ul>
+								<li>Engine: 3.0-liter TwinPower Turbo inline-six engine</li>
+								<li>Power: 540 horsepower</li>
+								<li>Torque: 479 lb-ft</li>
+								<li>Transmission: Seven-speed dual-clutch automatic</li>
+								<li>0-60 mph: 3.6 seconds</li>
+								<li>Top speed: 190 mph</li>
+								<li>Weight: 3,400 pounds</li>
+								<li>Suspension: Adaptive M suspension with electronically controlled dampers</li>
+								<li>Brakes: Lightweight high-performance carbon-ceramic brakes</li>
+								<li>Tires: Michelin Pilot Sport Cup 2 tires</li>
+							</ul>
+						</details>
+					</div>
+
+					<div style="margin-top: 50px;">
+					
+						<details>
+							<summary>Track Lap Times</summary>
+							<p>The BMW M4 CSL is designed for performance on the racetrack, and it has set some impressive lap times around the world. Here are some of the major track lap times for the BMW M4 CSL:</p>
+							<ul>
+								<li>Nurburgring Nordschleife: 7:28</li>
+								<li>Circuit de Spa-Francorchamps: 2:19</li>
+								<li>Silverstone Circuit: 1:59</li>
+								<li>Laguna Seca: 1:32</li>
+								<li>Suzuka Circuit: 2:14</li>
+							</ul>
+							
+						</details>
+					</div>
+				</div>
+
+				<div class="insideimageNew" style="margin-top: 15px;">
+
+					<!-- Image Inside of Carousel Slider -->
+					<div class="imgs">
+						<img class="img-slide" src="m4csl1.jpg" alt="1">
+						<img class="img-slide" src="m4csl2.jpg" alt="2">
+						<img class="img-slide" src="m4csl3.jpg" alt="3">
+						<!-- Little Dots -->
+						<div style="margin-top:-30px;text-align: center;">
+							<button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+						</div>
+					</div>
+
+					<div class="videos">
+						
+							<iframe  width="560" height="315" src="https://www.youtube.com/embed/EshrYQmCPsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>McLaren</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+	window.onload = function() {
+
+		var inita = document.getElementsByClassName("img-slide");
+		var initb = document.getElementsByClassName("ponitBtn");
+		inita[0].style.display = 'block';
+		for (var i = 1; i < inita.length; i++) {
+			inita[i].style.display = 'none';
+			initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+	}
+</script>
+<script type="text/javascript">
+	var index1 = -1;
+
+	function ChangeImg1(item) {
+		if (item === undefined) {
+			index1++;
+		} else {
+			index1 = item;
+		}
+		var a = document.getElementsByClassName("img-slide");
+		var b = document.getElementsByClassName("ponitBtn");
+		if (index1 >= a.length) index1 = 0;
+		for (var i = 0; i < a.length; i++) {
+			a[i].style.display = 'none';
+			b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+		a[index1].style.display = 'block';
+		b[index1].style.background = 'rgb(255, 117, 5)';
+
+	}
+	//timer set
+	setInterval(ChangeImg1, 3000);
+</script>
+</head>
+<body>
+<div style="height: 90%;width: 100%;">
+	
+	<div class="infoModalNew">
+		<div class="insidetextNew">
+			<div>
+				<h2>BMW M8 Competition</h2>
+				<details open>
+				  <summary>Introduction</summary>
+				  <p>The BMW M8 Competition is a high-performance sports car that combines luxury and speed. The M8 Competition is part of BMW's M series, which is known for its high-performance and precision engineering. The M8 Competition promises an exciting driving experience, whether on the road or the track.</p>
+				  <p>The exterior of the M8 Competition is designed for maximum performance, with a sleek profile and bold lines. The car also features an aggressive front grille and air intakes. The interior of the M8 Competition is designed for comfort and luxury, with premium materials and advanced technology features.</p>
+				</details>
+			  </div>
+			  
+			  <div style="margin-top: 50px;">
+				<details>
+				  <summary>Specs</summary>
+				  <ul>
+					<li>Engine: 4.4-liter twin-turbocharged V8</li>
+					<li>Power: 617 horsepower</li>
+					<li>Torque: 553 lb-ft</li>
+					<li>Transmission: Eight-speed automatic</li>
+					<li>0-60 mph: 3.0 seconds</li>
+					<li>Top speed: 189 mph</li>
+					<li>Weight: 4,480 pounds</li>
+					<li>Suspension: Adaptive M suspension</li>
+					<li>Brakes: M compound brakes</li>
+					<li>Tires: Michelin Pilot Sport 4S tires</li>
+				  </ul>
+				  <p>The BMW M8 Competition is all about performance, and it has the numbers to back it up. The car can go from 0 to 60 mph in just 3.0 seconds and has a top speed of 189 mph. The car's adaptive M suspension and M compound brakes contribute to its impressive performance on the track.</p>
+				</details>
+			  </div>
+			  <div style="margin-top: 50px;">
+				<details>
+				  <summary>Track Lap Times</summary>
+				  <p>The BMW M8 Competition is designed for high-performance driving, and it has set some impressive lap times around the world. Here are some of the major track lap times for the BMW M8 Competition:</p>
+				  <ul>
+					<li>Nurburgring Nordschleife: 7:30.79</li>
+					<li>Circuit de Spa-Francorchamps: 2:24.25</li>
+					<li>Autodromo Nazionale Monza: 1:51.80</li>
+					<li>Sepang International Circuit: 2:22.35</li>
+					<li>Virginia International Raceway: 2:45.81</li>
+				  </ul>
+				</details>
+			  </div>
+		</div>
+
+		<div class="insideimageNew" style="margin-top: 15px;">
+			<!-- Image -->
+			<div class="imgs">
+				<img class="img-slide" src="bmwm8 (1).jpg" alt="1">
+				<img class="img-slide" src="bmwm8 (2).jpg" alt="2">
+				<img class="img-slide" src="bmwm8 (3).jpg" alt="3">
+				<!-- Dots -->
+				<div style="margin-top:-30px;text-align: center;">
+					<button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+					<button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+					<button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+				</div>
+			</div>
+
+			<div class="videos">
+				
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/Kt0VH2iULrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			
+		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lamborghini Aventador SVJ</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+	window.onload = function() {
+
+		var inita = document.getElementsByClassName("img-slide");
+		var initb = document.getElementsByClassName("ponitBtn");
+		inita[0].style.display = 'block';
+		for (var i = 1; i < inita.length; i++) {
+			inita[i].style.display = 'none';
+			initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+	}
+</script>
+<script type="text/javascript">
+	var index1 = -1;
+
+	function ChangeImg1(item) {
+		if (item === undefined) {
+			index1++;
+		} else {
+			index1 = item;
+		}
+		var a = document.getElementsByClassName("img-slide");
+		var b = document.getElementsByClassName("ponitBtn");
+		if (index1 >= a.length) index1 = 0;
+		for (var i = 0; i < a.length; i++) {
+			a[i].style.display = 'none';
+			b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+		a[index1].style.display = 'block';
+		b[index1].style.background = 'rgb(255, 117, 5)';
+
+	}
+	//timer set
+	setInterval(ChangeImg1, 3000);
+</script>
+</head>
+<body>
+<div style="height: 90%;width: 100%;">
+	
+	<div class="infoModalNew">
+		<div class="insidetextNew">
+			<div>
+				<h2>Lamborghini Aventador SVJ</h2>
+				<details open>
+				  <summary>Introduction</summary>
+				  <p>The Lamborghini Aventador SVJ (SuperVeloce Jota) is a limited edition, track-focused version of the iconic Aventador supercar. The SVJ takes the performance capabilities of the Aventador to new heights with enhanced aerodynamics, lightweight construction, and a powerful V12 engine.</p>
+				  <p>The exterior of the Aventador SVJ is characterized by its aggressive design, featuring a prominent rear wing and aero-optimized bodywork. The interior boasts a race-inspired cabin with lightweight materials and an emphasis on driver engagement.</p>
+				</details>
+			  </div>
+			  
+			  <div style="margin-top: 50px;">
+				<details>
+				  <summary>Specs</summary>
+				  <ul>
+					<li>Engine: 6.5-liter naturally aspirated V12</li>
+					<li>Power: 759 horsepower</li>
+					<li>Torque: 531 lb-ft</li>
+					<li>Transmission: Seven-speed ISR single-clutch automated manual</li>
+					<li>0-60 mph: 2.8 seconds</li>
+					<li>Top speed: 217 mph</li>
+					<li>Weight: 3,362 pounds</li>
+					<li>Suspension: Magneto-rheological dampers</li>
+					<li>Brakes: Carbon-ceramic brakes</li>
+					<li>Tires: Pirelli P Zero Trofeo R tires</li>
+				</ul>
+				<p>The Lamborghini Aventador SVJ boasts a 6.5-liter naturally aspirated V12 engine that delivers 759 horsepower and 531 lb-ft of torque. The car can sprint from 0-60 mph in just 2.8 seconds and reach a top speed of 217 mph. Its magneto-rheological dampers and carbon-ceramic brakes contribute to the impressive handling and braking performance that the SVJ is known for.</p>
+			  </details>
+			</div>
+			<div style="margin-top: 50px;">
+			  <details>
+				<summary>Track Lap Times</summary>
+				<p>The Lamborghini Aventador SVJ is designed to excel on the track, setting impressive lap times at various circuits around the world. Here are some of the major track lap times for the Aventador SVJ:</p>
+				<ul>
+				  <li>Nurburgring Nordschleife: 6:44.97</li>
+				  <li>Circuit de Spa-Francorchamps: 2:20.80 (estimated)</li>
+				  <li>Autodromo Nazionale Monza: 1:49.90 (estimated)</li>
+				  <li>Sepang International Circuit: 2:19.50 (estimated)</li>
+				  <li>Virginia International Raceway: 2:43.10 (estimated)</li>
+				</ul>
+			  </details>
+			</div>
+	  </div>
+
+	  <div class="insideimageNew" style="margin-top: 15px;">
+		  <!-- Image -->
+		  <div class="imgs">
+			  <img class="img-slide" src="svj (1).jpg" alt="1">
+			  <img class="img-slide" src="svj (2).jpg" alt="2">
+			  <img class="img-slide" src="svj (3).jpg" alt="3">
+			  <!-- Dots -->
+			  <div style="margin-top:-30px;text-align: center;">
+				  <button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+				  <button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+				  <button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+			  </div>
+		  </div>
+
+		  <div class="videos">
+			  
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/viW44cUfxCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		  
+	  </div>
+	  </div>
+  </div>
+</div>
+</body>
+</html>

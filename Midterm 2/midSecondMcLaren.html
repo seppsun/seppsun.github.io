@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>McLaren</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var inita = document.getElementsByClassName("img-slide");
+				var initb = document.getElementsByClassName("ponitBtn");
+				inita[0].style.display = 'block';
+				for (var i = 1; i < inita.length; i++) {
+					inita[i].style.display = 'none';
+					initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			var index1 = -1;
+
+			function ChangeImg1(item) {
+				if (item === undefined) {
+					index1++;
+				} else {
+					index1 = item;
+				}
+				var a = document.getElementsByClassName("img-slide");
+				var b = document.getElementsByClassName("ponitBtn");
+				if (index1 >= a.length) index1 = 0;
+				for (var i = 0; i < a.length; i++) {
+					a[i].style.display = 'none';
+					b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+				a[index1].style.display = 'block';
+				b[index1].style.background = 'rgb(255, 117, 5)';
+
+			}
+			//timer set
+			setInterval(ChangeImg1, 3000);
+		</script>
+	</head>
+	<body>
+		<div style="height: 90%;width: 100%;">
+			
+			<div class="infoModalNew">
+				<div class="insidetextNew">
+					<div>
+						<h2>McLaren 600LT</h2>
+						<details open>
+						  <summary>Introduction</summary>
+						  <p>The McLaren 600LT is a high-performance sports car that combines track-focused technology with road-legal capabilities. The 600LT is part of McLaren's "Longtail" series, which is known for its lightweight construction and aerodynamic design. The 600LT is a limited edition model that promises a thrilling driving experience, whether on the road or the racetrack.</p>
+						  <p>The exterior of the 600LT is designed for maximum aerodynamic performance, with a carbon fiber body and a sleek profile. The car also features a large rear wing and an aggressive front splitter. The interior of the 600LT is designed for performance and comfort, with racing-inspired seats and advanced technology features.</p>
+						</details>
+					  </div>
+					  
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Specs</summary>
+						  <ul>
+							<li>Engine: 3.8-liter twin-turbocharged V8</li>
+							<li>Power: 592 horsepower</li>
+							<li>Torque: 457 lb-ft</li>
+							<li>Transmission: Seven-speed dual-clutch automatic</li>
+							<li>0-60 mph: 2.8 seconds</li>
+							<li>Top speed: 204 mph</li>
+							<li>Weight: 2,749 pounds</li>
+							<li>Suspension: Carbon fiber suspension components</li>
+							<li>Brakes: Carbon-ceramic brakes</li>
+							<li>Tires: Pirelli P Zero Trofeo R tires</li>
+						  </ul>
+						  <p>The McLaren 600LT is all about performance, and it has the numbers to back it up. The car can go from 0 to 60 mph in just 2.8 seconds and has a top speed of 204 mph. The 600LT is also incredibly lightweight, weighing in at just 2,749 pounds. The car's carbon fiber suspension components and carbon-ceramic brakes contribute to its impressive performance on the track.</p>
+						</details>
+					  </div>
+					  
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Track Lap Times</summary>
+						  <p>The McLaren 600LT is designed for high-performance driving, and it has set some impressive lap times around the world. Here are some of the major track lap times for the McLaren 600LT:</p>
+						  <ul>
+							<li>Nurburgring Nordschleife: 6:43.30</li>
+							<li>Circuit de Spa-Francorchamps: 2:15.50</li>
+							<li>Autodromo Nazionale Monza: 1:48.00</li>
+							<li>Sepang International Circuit: 2:09.90</li>
+							<li>Virginia International Raceway: 2:37.00</li>
+						  </ul>
+						</details>
+					  </div>
+				</div>
+
+				<div class="insideimageNew" style="margin-top: 15px;">
+					<!-- Image -->
+					<div class="imgs">
+						<img class="img-slide" src="600lt1.jpg" alt="1">
+						<img class="img-slide" src="600lt2.jpg" alt="2">
+						<img class="img-slide" src="600lt3.jpg" alt="3">
+						<!-- Dots -->
+						<div style="margin-top:-30px;text-align: center;">
+							<button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+						</div>
+					</div>
+
+					<div class="videos">
+						
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/KCzFQy0px7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						
+					
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

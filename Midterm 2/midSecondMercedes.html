@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mercedes GT Black Series</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var inita = document.getElementsByClassName("img-slide");
+				var initb = document.getElementsByClassName("ponitBtn");
+				inita[0].style.display = 'block';
+				for (var i = 1; i < inita.length; i++) {
+					inita[i].style.display = 'none';
+					initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			var index1 = -1;
+
+			function ChangeImg1(item) {
+				if (item === undefined) {
+					index1++;
+				} else {
+					index1 = item;
+				}
+				var a = document.getElementsByClassName("img-slide");
+				var b = document.getElementsByClassName("ponitBtn");
+				if (index1 >= a.length) index1 = 0;
+				for (var i = 0; i < a.length; i++) {
+					a[i].style.display = 'none';
+					b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+				a[index1].style.display = 'block';
+				b[index1].style.background = 'rgb(255, 117, 5)';
+
+			}
+			//Timer set
+			setInterval(ChangeImg1, 3000);
+		</script>
+	</head>
+	<body>
+		<div style="height: 90%;width: 100%;">
+			
+			<div class="infoModalNew">
+				<div class="insidetextNew">
+					<div>
+						<h2>Mercedes GT Black Series</h2>
+						<details open>
+						  <summary>Introduction</summary>
+						  <p>The Mercedes GT Black Series is a high-performance sports car that is designed for track use. It is the most powerful Mercedes-AMG car ever produced, with a top speed of over 200 mph. The GT Black Series is built with lightweight materials, advanced aerodynamics, and a powerful engine, making it one of the most exciting sports cars on the market.</p>
+						  <p>The exterior of the GT Black Series is designed for maximum aerodynamic performance, with a large rear wing and an aggressive front splitter. The car also features lightweight body panels and advanced suspension technology. The interior of the GT Black Series is designed for performance and comfort, with racing-inspired seats and advanced technology features.</p>
+						</details>
+					  </div>
+					  
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Specs</summary>
+						  <ul>
+							<li>Engine: 4.0-liter twin-turbo V8</li>
+							<li>Power: 720 horsepower</li>
+							<li>Torque: 590 lb-ft</li>
+							<li>Transmission: Seven-speed dual-clutch automatic</li>
+							<li>0-60 mph: 3.1 seconds</li>
+							<li>Top speed: 202 mph</li>
+							<li>Weight: 3,616 pounds</li>
+							<li>Suspension: Adaptive suspension</li>
+							<li>Brakes: Carbon-ceramic brakes</li>
+							<li>Tires: Michelin Pilot Sport Cup 2 R tires</li>
+						  </ul>
+						  <p>The Mercedes GT Black Series is powered by a 4.0-liter twin-turbo V8 engine that produces 720 horsepower and 590 lb-ft of torque. The car can go from 0 to 60 mph in just 3.1 seconds and has a top speed of 202 mph. The GT Black Series also features an adaptive suspension system and carbon-ceramic brakes, making it a true track-focused supercar.</p>
+						</details>
+					  </div>
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Track Lap Times</summary>
+						  <p>The Mercedes GT Black Series is designed for high-performance track driving, and it has set some impressive lap times around the world. Here are some of the major track lap times for the Mercedes GT Black Series:</p>
+						  <ul>
+							<li>Nurburgring Nordschleife: 6:43.616</li>
+							<li>Hockenheimring GP: 1:43.300</li>
+							<li>WeatherTech Raceway Laguna Seca: 1:27.54</li>
+						  </ul>
+						</details>
+					  </div>
+				</div>
+	
+				<div class="insideimageNew" style="margin-top: 15px;">
+					<!-- Dots -->
+					<div class="imgs">
+						<img class="img-slide" src="gtbs1.jpg" alt="1">
+						<img class="img-slide" src="gtbs2.jpg" alt="2">
+						<img class="img-slide" src="gtbs3.jpg" alt="3">
+						
+						<!-- Images -->
+						<div style="margin-top:-30px;text-align: center;">
+							<button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(3)"></button>
+						</div>
+					</div>
+	
+					<div class="videos">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/RWH0eNAf8ew" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</body>
+	
+

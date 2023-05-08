@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lamborghini Huracan STO</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var inita = document.getElementsByClassName("img-slide");
+				var initb = document.getElementsByClassName("ponitBtn");
+				inita[0].style.display = 'block';
+				for (var i = 1; i < inita.length; i++) {
+					inita[i].style.display = 'none';
+					initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			var index1 = -1;
+
+			function ChangeImg1(item) {
+				if (item === undefined) {
+					index1++;
+				} else {
+					index1 = item;
+				}
+				var a = document.getElementsByClassName("img-slide");
+				var b = document.getElementsByClassName("ponitBtn");
+				if (index1 >= a.length) index1 = 0;
+				for (var i = 0; i < a.length; i++) {
+					a[i].style.display = 'none';
+					b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+				a[index1].style.display = 'block';
+				b[index1].style.background = 'rgb(255, 117, 5)';
+
+			}
+			//Timer set
+			setInterval(ChangeImg1, 3000);
+		</script>
+	</head>
+	<body>
+		<div style="height: 90%;width: 100%;">
+			
+			<div class="infoModalNew">
+				<div class="insidetextNew">
+					<div>
+						<h2>Lamborghini STO</h2>
+						<details open>
+						  <summary>Introduction</summary>
+						  <p>The Lamborghini STO, which stands for "Super Trofeo Omologata," is a limited edition supercar that is designed for high-performance track driving. The STO is inspired by Lamborghini's racing heritage, particularly its success in the Super Trofeo racing series. The car is built with lightweight materials and advanced aerodynamics, making it one of the most exciting supercars on the market.</p>
+						  <p>The exterior of the STO is designed for maximum aerodynamic performance, with a large rear wing and an aggressive front splitter. The car also features a lightweight carbon fiber body and advanced suspension technology. The interior of the STO is designed for performance and comfort, with racing-inspired seats and advanced technology features.</p>
+						</details>
+					  </div>
+					  
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Specs</summary>
+						  <ul>
+							<li>Engine: 5.2-liter naturally aspirated V10</li>
+							<li>Power: 631 horsepower</li>
+							<li>Torque: 417 lb-ft</li>
+							<li>Transmission: Seven-speed dual-clutch automatic</li>
+							<li>0-60 mph: 3.0 seconds</li>
+							<li>Top speed: 193 mph</li>
+							<li>Weight: 2,952 pounds</li>
+							<li>Suspension: Magneto-rheological suspension</li>
+							<li>Brakes: Carbon-ceramic brakes</li>
+							<li>Tires: Pirelli P Zero Corsa tires</li>
+						  </ul>
+						  <p>The Lamborghini STO is all about performance, and it delivers with a powerful 5.2-liter naturally aspirated V10 engine that produces 631 horsepower. The car can go from 0 to 60 mph in just 3.0 seconds and has a top speed of 193 mph. The STO also features advanced suspension technology and carbon-ceramic brakes, making it a true track-focused supercar.</p>
+						</details>
+					  </div>
+					  
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Track Lap Times</summary>
+						  <p>The Lamborghini STO is designed for high-performance track driving, and it has set some impressive lap times around the world. Here are some of the major track lap times for the Lamborghini STO:</p>
+						  <ul>
+							<li>Nurburgring Nordschleife: 6:43.00</li>
+							<li>Autodromo Nazionale Monza: 1:47.30</li>
+							<li>Spa-Francorchamps: 2:23.00</li>
+							<li>Mount Panorama Circuit: 2:16.40</li>
+							<li>Yas Marina Circuit: 2:23.00</li>
+						  </ul>
+						</details>
+					  </div>
+				</div>
+
+			<div class="insideimageNew" style="margin-top: 15px;">
+					<!-- Dots -->
+					<div class="imgs">
+						<img class="img-slide" src="sto1.jpg" alt="1">
+						<img class="img-slide" src="sto2.jpg" alt="2">
+						<img class="img-slide" src="sto3.jpg" alt="3">
+						<img class="img-slide" src="sto4.jpg" alt="4">
+						<!-- Images -->
+						<div style="margin-top:-30px;text-align: center;">
+							<button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(3)"></button>
+						</div>
+					</div>
+
+					<div class="videos">
+						
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/7ztOTUO_Mcs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

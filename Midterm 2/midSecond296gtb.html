@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ferrari 296 GTB</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+	window.onload = function() {
+
+		var inita = document.getElementsByClassName("img-slide");
+		var initb = document.getElementsByClassName("ponitBtn");
+		inita[0].style.display = 'block';
+		for (var i = 1; i < inita.length; i++) {
+			inita[i].style.display = 'none';
+			initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+	}
+</script>
+<script type="text/javascript">
+	var index1 = -1;
+
+	function ChangeImg1(item) {
+		if (item === undefined) {
+			index1++;
+		} else {
+			index1 = item;
+		}
+		var a = document.getElementsByClassName("img-slide");
+		var b = document.getElementsByClassName("ponitBtn");
+		if (index1 >= a.length) index1 = 0;
+		for (var i = 0; i < a.length; i++) {
+			a[i].style.display = 'none';
+			b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+		a[index1].style.display = 'block';
+		b[index1].style.background = 'rgb(255, 117, 5)';
+
+	}
+	//timer set
+	setInterval(ChangeImg1, 3000);
+</script>
+</head>
+<body>
+<div style="height: 90%;width: 100%;">
+	
+	<div class="infoModalNew">
+		<div class="insidetextNew">
+			<div>
+				<h2>Ferrari 296 GTB</h2>
+				<details open>
+				  <summary>Introduction</summary>
+				  <p>The Ferrari 296 GTB is a groundbreaking sports car from the iconic Italian automaker, introducing a hybrid powertrain to the mid-engine V6 lineup. The 296 GTB combines cutting-edge technology, stunning design, and exhilarating performance to deliver a unique driving experience that is both eco-friendly and powerful.</p>
+				  <p>The exterior of the 296 GTB is characterized by its sleek lines and aerodynamic design. The interior focuses on driver engagement with premium materials and the latest in Ferrari's infotainment and driver assistance technologies.</p>
+				</details>
+			  </div>
+			  
+			  <div style="margin-top: 50px;">
+				<details>
+				  <summary>Specs</summary>
+				  <ul>
+					<li>Engine: 3.0-liter twin-turbocharged V6 + electric motor</li>
+					<li>Power: 819 horsepower (combined)</li>
+					<li>Torque: 546 lb-ft</li>
+					<li>Transmission: Eight-speed dual-clutch automatic</li>
+					<li>0-60 mph: 2.9 seconds</li>
+					<li>Top speed: 205 mph</li>
+					<li>Weight: 3,241 pounds</li>
+					<li>Suspension: Magnetorheological dampers</li>
+					<li>Brakes: Carbon-ceramic brakes</li>
+					<li>Tires:Michelin Pilot Sport 4S tires</li>
+				</ul>
+				<p>The Ferrari 296 GTB boasts impressive performance figures, with a combined output of 819 horsepower, a 0-60 mph time of just 2.9 seconds, and a top speed of 205 mph. The car's magnetorheological dampers and carbon-ceramic brakes ensure exceptional handling and braking capabilities on the track and road alike.</p>
+			  </details>
+			</div>
+			<div style="margin-top: 50px;">
+			  <details>
+				<summary>Track Lap Times</summary>
+				<p>As a high-performance hybrid sports car, the Ferrari 296 GTB has demonstrated its capabilities on some of the most challenging tracks around the world. Here are some major track lap times for the Ferrari 296 GTB:</p>
+				<ul>
+				  <li>Nurburgring Nordschleife: 7:10.00 (estimated)</li>
+				  <li>Circuit de Spa-Francorchamps: 2:18.50 (estimated)</li>
+				  <li>Autodromo Nazionale Monza: 1:47.90 (estimated)</li>
+				  <li>Sepang International Circuit: 2:18.00 (estimated)</li>
+				  <li>Virginia International Raceway: 2:40.30 (estimated)</li>
+				</ul>
+			  </details>
+			</div>
+	  </div>
+
+	  <div class="insideimageNew" style="margin-top: 15px;">
+		  <!-- Image -->
+		  <div class="imgs">
+			  <img class="img-slide" src="296gtb (1).jpg" alt="1">
+			  <img class="img-slide" src="296gtb (2).jpg" alt="2">
+			  <img class="img-slide" src="296gtb (3).jpg" alt="3">
+			  <!-- Dots -->
+			  <div style="margin-top:-30px;text-align: center;">
+				  <button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+				  <button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+				  <button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+			  </div>
+		  </div>
+
+		  <div class="videos">
+			  
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/D7Zv2kSBagc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	  </div>
+	  </div>
+  </div>
+</div>
+</body>
+</html>

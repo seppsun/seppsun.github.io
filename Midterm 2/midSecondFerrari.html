@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ferrari SF90 Stradale</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var inita = document.getElementsByClassName("img-slide");
+				var initb = document.getElementsByClassName("ponitBtn");
+				inita[0].style.display = 'block';
+				for (var i = 1; i < inita.length; i++) {
+					inita[i].style.display = 'none';
+					initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			var index1 = -1;
+
+			function ChangeImg1(item) {
+				if (item === undefined) {
+					index1++;
+				} else {
+					index1 = item;
+				}
+				var a = document.getElementsByClassName("img-slide");
+				var b = document.getElementsByClassName("ponitBtn");
+				if (index1 >= a.length) index1 = 0;
+				for (var i = 0; i < a.length; i++) {
+					a[i].style.display = 'none';
+					b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+				a[index1].style.display = 'block';
+				b[index1].style.background = 'rgb(255, 117, 5)';
+
+			}
+			//Timer Set
+			setInterval(ChangeImg1, 3000);
+		</script>
+	</head>
+	<body>
+		<div style="height: 90%;width: 100%;">
+			
+			<div class="infoModalNew">
+				<div class="insidetextNew">
+					<div>
+						<h2>Ferrari SF90 Stradale</h2>
+						<details open>
+						  <summary>Introduction</summary>
+						  <p>The Ferrari SF90 Stradale is a high-performance hybrid supercar that combines Ferrari's racing technology with its expertise in producing road cars. The SF90 Stradale is a limited edition model designed for car enthusiasts who want the ultimate driving experience. The car offers outstanding performance, thanks to its advanced hybrid powertrain, aerodynamic design, and lightweight construction.</p>
+						  <p>The exterior of the Ferrari SF90 Stradale is designed to maximize performance, with a sleek and aerodynamic profile that enhances the car's speed and handling. The car features advanced aerodynamics, including active flaps that open and close to optimize downforce and reduce drag. The interior of the SF90 Stradale is designed for comfort and performance, with racing-inspired seats and advanced technology features.</p>
+						</details>
+					  </div>
+					  
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Specs</summary>
+						  <ul>
+							<li>Engine: 4.0-liter V8 twin-turbocharged engine and three electric motors</li>
+							<li>Power: 986 horsepower</li>
+							<li>Torque: 590 lb-ft</li>
+							<li>Transmission: Eight-speed dual-clutch automatic</li>
+							<li>0-60 mph: 2.5 seconds</li>
+							<li>Top speed: 211 mph</li>
+							<li>Electric-only range: 16 miles</li>
+							<li>Weight: 3,461 pounds</li>
+							<li>Suspension: Adaptive magnetorheological suspension</li>
+							<li>Brakes: Carbon-ceramic brakes</li>
+							<li>Tires: Pirelli P Zero tires</li>
+						  </ul>
+						</details>
+					  </div>
+					  
+					  <div style="margin-top: 50px;">
+						<details>
+						  <summary>Track Lap Times</summary>
+						  <p>The Ferrari SF90 Stradale is designed for high-performance on both the road and track. Here are some of the major track lap times for the Ferrari SF90 Stradale:</p>
+						  <ul>
+							<li>Fiorano Circuit: 1:19.0</li>
+							<li>Nurburgring Nordschleife: 6:43.6</li>
+							<li>Circuit de Spa-Francorchamps: 2:23.0</li>
+							<li>Suzuka Circuit: 2:30.0</li>
+							<li>Sebring International Raceway: 1:55.0</li>
+						  </ul>
+						</details>
+					  </div>
+				</div>
+
+				<div class="insideimageNew" style="margin-top: 15px;">
+
+					<!-- Image -->
+					<div class="imgs">
+						<img class="img-slide" src="sf901.jpg" alt="1">
+						<img class="img-slide" src="sf902.jpg" alt="2">
+						<img class="img-slide" src="sf903.jpg" alt="3">
+						<img class="img-slide" src="sf904.jpg" alt="4">
+						<!-- Dots-->
+						<div style="margin-top:-30px;text-align: center;">
+							<button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+							<button class="ponitBtn" onclick="ChangeImg1(3)"></button>
+						</div>
+					</div>
+
+					<div class="videos">
+						
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/MvVXL-vBQs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						
+					
+				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

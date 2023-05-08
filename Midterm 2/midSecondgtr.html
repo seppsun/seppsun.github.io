@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AMG GT R</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+		
+		<script type="text/javascript">
+			window.onload = function() {
+				var inita = document.getElementsByClassName("img-slide");
+				var initb = document.getElementsByClassName("ponitBtn");
+				inita[0].style.display = 'block';
+				for (var i = 1; i < inita.length; i++) {
+					inita[i].style.display = 'none';
+					initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+			}
+		</script>
+		
+		<script type="text/javascript">
+			var index1 = -1;
+
+			function ChangeImg1(item) {
+				if (item === undefined) {
+					index1++;
+				} else {
+					index1 = item;
+				}
+				var a = document.getElementsByClassName("img-slide");
+				var b = document.getElementsByClassName("ponitBtn");
+				if (index1 >= a.length) index1 = 0;
+				for (var i = 0; i < a.length; i++) {
+					a[i].style.display = 'none';
+					b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+				}
+				a[index1].style.display = 'block';
+				b[index1].style.background = 'rgb(255, 117, 5)';
+			}
+			//timer set
+			setInterval(ChangeImg1, 3000);
+		</script>
+	</head>
+	
+	<body>
+		<div class="infoModalNew">
+			<div class="insidetextNew">
+				<div>
+					<h2>AMG GT R</h2>
+					<details open>
+						<summary>Introduction</summary>
+						<p>The AMG GT R is a high-performance sports car that combines power and luxury. The GT R is part of the AMG GT series, which is known for its aggressive styling and exceptional performance. The GT R promises an exhilarating driving experience, whether on the road or the track.</p>
+						<p>The exterior of the GT R is designed for maximum performance, with a long hood, aggressive front grille, and aerodynamic lines. The car also features an adjustable rear wing and active aerodynamics. The interior of the GT R is designed for comfort and luxury, with premium materials and advanced technology features.</p>
+					</details>
+				</div>
+			  
+				<div style="margin-top: 50px;">
+					<details>
+						<summary>Specs</summary>
+						<ul>
+							<li>Engine: 4.0-liter twin-turbocharged V8</li>
+							<li>Power: 577 horsepower</li>
+							<li>Torque: 516 lb-ft</li>
+							<li>Transmission: Seven-speed dual-clutch automatic</li>
+							<li>0-60 mph: 3.5 seconds</li>
+							<li>Top speed: 198 mph</li>
+							<li>Weight:3,627 pounds</li>
+							<li>Suspension: AMG RIDE CONTROL sports suspension</li>
+							<li>Brakes: High-performance composite braking system</li>
+							<li>Tires: Michelin Pilot Sport Cup 2 tires</li>
+							</ul>
+							<p>The AMG GT R is a true performance machine, with a 4.0-liter twin-turbocharged V8 engine that delivers 577 horsepower and 516 lb-ft of torque. The car can go from 0 to 60 mph in just 3.5 seconds and has a top speed of 198 mph. The GT R also features AMG RIDE CONTROL sports suspension, a high-performance composite braking system, and Michelin Pilot Sport Cup 2 tires for exceptional handling and control on the road or the track.</p>
+							</details>
+							</div>
+							<div style="margin-top: 50px;">
+								<details>
+									<summary>Track Lap Times</summary>
+									<p>The AMG GT R is designed for high-performance driving, and it has set some impressive lap times around the world. Here are some of the major track lap times for the AMG GT R:</p>
+									<ul>
+										<li>Nurburgring Nordschleife: 7:10.92</li>
+										<li>Circuit de Spa-Francorchamps: 2:18.00</li>
+										<li>Laguna Seca: 1:33.62</li>
+										<li>Mount Panorama Circuit: 2:14.54</li>
+									</ul>
+								</details>
+							</div>
+						</div>
+				
+						<div class="insideimageNew" style="margin-top: 15px;">
+							<!-- Image -->
+							<div class="imgs">
+								<img class="img-slide" src="amggtr (1).jpg" alt="1">
+								<img class="img-slide" src="amggtr (2).jpg" alt="2">
+								<img class="img-slide" src="amggtr (3).jpg" alt="3">
+								<!-- Dots -->
+								<div style="margin-top:-30px;text-align: center;">
+									<button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+									<button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+									<button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+								</div>
+							</div>
+				
+							<div class="videos">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/csAXruiBLTs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</body>
+				

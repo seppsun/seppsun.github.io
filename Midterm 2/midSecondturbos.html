@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Porsche 911 Turbo S</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<script type="text/javascript">
+	window.onload = function() {
+
+		var inita = document.getElementsByClassName("img-slide");
+		var initb = document.getElementsByClassName("ponitBtn");
+		inita[0].style.display = 'block';
+		for (var i = 1; i < inita.length; i++) {
+			inita[i].style.display = 'none';
+			initb[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+	}
+</script>
+<script type="text/javascript">
+	var index1 = -1;
+
+	function ChangeImg1(item) {
+		if (item === undefined) {
+			index1++;
+		} else {
+			index1 = item;
+		}
+		var a = document.getElementsByClassName("img-slide");
+		var b = document.getElementsByClassName("ponitBtn");
+		if (index1 >= a.length) index1 = 0;
+		for (var i = 0; i < a.length; i++) {
+			a[i].style.display = 'none';
+			b[i].style.background = 'rgba(218, 145, 0 ,0.5)';
+		}
+		a[index1].style.display = 'block';
+		b[index1].style.background = 'rgb(255, 117, 5)';
+
+	}
+	//timer set
+	setInterval(ChangeImg1, 3000);
+</script>
+</head>
+<body>
+<div style="height: 90%;width: 100%;">
+	
+	<div class="infoModalNew">
+		<div class="insidetextNew">
+			<div>
+				<h2>Porsche 911 Turbo S (992)</h2>
+				<details open>
+				  <summary>Introduction</summary>
+				  <p>The Porsche 911 Turbo S (992) is a high-performance sports car that represents the pinnacle of Porsche's legendary 911 lineup. It combines exceptional performance with luxury and cutting-edge technology, making it an extraordinary vehicle for both road and track.</p>
+				  <p>The exterior of the 911 Turbo S (992) is characterized by its iconic 911 silhouette, wide body, and aggressive aerodynamics. The interior is crafted with premium materials and features the latest in Porsche's infotainment and driver assistance technologies.</p>
+				</details>
+			  </div>
+			  
+			  <div style="margin-top: 50px;">
+				<details>
+				  <summary>Specs</summary>
+				  <ul>
+					<li>Engine: 3.8-liter twin-turbocharged flat-six</li>
+					<li>Power: 640 horsepower</li>
+					<li>Torque: 590 lb-ft</li>
+					<li>Transmission: Eight-speed PDK automatic</li>
+					<li>0-60 mph: 2.6 seconds</li>
+					<li>Top speed: 205 mph</li>
+					<li>Weight: 3,636 pounds</li>
+					<li>Suspension: Porsche Active Suspension Management (PASM)</li>
+					<li>Brakes: Porsche Ceramic Composite Brakes (PCCB)</li>
+					<li>Tires: Michelin Pilot Sport Cup 2 tires</li>
+				</ul>
+				<p>The Porsche 911 Turbo S (992) boasts impressive performance figures, with a 0-60 mph time of just 2.6 seconds and a top speed of 205 mph. The car's Porsche Active Suspension Management (PASM) and Porsche Ceramic Composite Brakes (PCCB) contribute to its exceptional handling and braking capabilities on the track.</p>
+			  </details>
+			</div>
+			<div style="margin-top: 50px;">
+			  <details>
+				<summary>Track Lap Times</summary>
+				<p>The Porsche 911 Turbo S (992) is built for high-performance driving, and it has set some impressive lap times at various tracks around the world. Here are some major track lap times for the Porsche 911 Turbo S (992):</p>
+				<ul>
+				  <li>Nurburgring Nordschleife: 7:17.00</li>
+				  <li>Circuit de Spa-Francorchamps: 2:20.75</li>
+				  <li>Autodromo Nazionale Monza: 1:49.40</li>
+				  <li>Sepang International Circuit: 2:19.70</li>
+				  <li>Virginia International Raceway: 2:42.51</li>
+				</ul>
+			  </details>
+			</div>
+	  </div>
+
+	  <div class="insideimageNew" style="margin-top: 15px;">
+		  <!-- Image -->
+		  <div class="imgs">
+			  <img class="img-slide" src="turbos (1).jpg" alt="1">
+			  <img class="img-slide" src="turbos (2).jpg" alt="2">
+			  <img class="img-slide" src="turbos (3).jpg" alt="3">
+			  <!-- Dots -->
+			  <div style="margin-top:-30px;text-align: center;">
+				  <button class="ponitBtn" onclick="ChangeImg1(0)"></button>
+				  <button class="ponitBtn" onclick="ChangeImg1(1)"></button>
+				  <button class="ponitBtn" onclick="ChangeImg1(2)"></button>
+			  </div>
+		  </div>
+
+		  <div class="videos">
+			  
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/ZLj5rm5f12k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		  
+	  </div>
+	  </div>
+  </div>
+</div>
+</body>
+</html>
